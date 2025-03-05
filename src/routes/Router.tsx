@@ -1,7 +1,10 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
+
+import { ReactNode } from "react";
 import Root from "../layout/Root";
 import Login from "../pages/Login/Login";
-import { ReactNode } from "react";
+import Dashboard from "../layout/Dashboard";
+import ActiveContact from "../pages/ActiveContact/ActiveContact";
 
 interface CustomRouteObject extends RouteObject {
   element: ReactNode;
@@ -11,13 +14,24 @@ interface CustomRouteObject extends RouteObject {
 
 const router = createBrowserRouter<CustomRouteObject[]>([
   {
-    path: "/",
+    path: "/login",
     element: <Root />,
     errorElement: <h1>Error</h1>,
     children: [
       {
-        path: "/",
+        path: "/login",
         element: <Login />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <Dashboard />,
+    errorElement: <h1>Error</h1>,
+    children: [
+      {
+        path: "/active-contact",
+        element: <ActiveContact />,
       },
     ],
   },
