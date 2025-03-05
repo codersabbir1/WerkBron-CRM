@@ -12,7 +12,7 @@ const Header: React.FC = () => {
           />
         </form>
         <div className="flex gap-4 items-center">
-          <div className="px-3 py-2 bg-Primary rounded-md">
+          <div className="px-3 py-2 bg-Primary rounded-md cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
               />
             </svg>
           </div>
-          <div className="">
+          <div className="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -47,9 +47,7 @@ const Header: React.FC = () => {
             </svg>
           </div>
           <div className="h-10 w-[1px] bg-[#D8DCE8]"></div>
-          <h1 className="text-[#303135] text-base font-semibold">
-            John
-          </h1>
+          <h1 className="text-[#303135] text-base font-semibold">John</h1>
         </div>
       </div>
     </header>

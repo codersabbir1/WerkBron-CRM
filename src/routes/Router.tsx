@@ -5,7 +5,6 @@ import Login from "../pages/Login/Login";
 import Dashboard from "../layout/Dashboard";
 import ActiveContact from "../pages/ActiveContact/ActiveContact";
 
-
 const router = createBrowserRouter([
   {
     path: "/login",
@@ -24,7 +23,7 @@ const router = createBrowserRouter([
     errorElement: <h1>Error</h1>,
     children: [
       {
-        path: "/active-contact",
+        path: "/",
         element: <ActiveContact />,
       },
     ],
