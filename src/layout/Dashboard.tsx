@@ -15,7 +15,7 @@ const Dashboard: React.FC = () => {
         <Header />
 
         {/* Page Content */}
-        <main className="p-6 flex-1">
+        <main className="m-4">
           <Outlet />
         </main>
       </div>
