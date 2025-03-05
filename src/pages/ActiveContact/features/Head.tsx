@@ -3,7 +3,7 @@ import React from "react";
 const Head: React.FC = () => {
   return (
     <div className="flex justify-between items-center gap-4 p-4">
-      <div className="flex gap-2 bg-[#F4F7FE] p-1 rounded text-sm font-medium">
+      <div className="flex gap-2 bg-[#F4F7FE] py-1 px-[5px] rounded text-sm font-medium">
         <span className="bg-[#fff] text-[#303135]  py-[6px] px-3 rounded cursor-pointer">
           Active Contacts
         </span>
