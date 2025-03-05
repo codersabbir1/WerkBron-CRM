@@ -1,18 +1,12 @@
-import { createBrowserRouter, RouteObject } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
-import { ReactNode } from "react";
 import Root from "../layout/Root";
 import Login from "../pages/Login/Login";
 import Dashboard from "../layout/Dashboard";
 import ActiveContact from "../pages/ActiveContact/ActiveContact";
 
-interface CustomRouteObject extends RouteObject {
-  element: ReactNode;
-  errorElement?: ReactNode;
-  children?: CustomRouteObject[];
-}
 
-const router = createBrowserRouter<CustomRouteObject[]>([
+const router = createBrowserRouter([
   {
     path: "/login",
     element: <Root />,
