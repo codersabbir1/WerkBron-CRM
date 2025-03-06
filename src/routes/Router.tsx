@@ -4,6 +4,7 @@ import Root from "../layout/Root";
 import Login from "../pages/Login/Login";
 import Dashboard from "../layout/Dashboard";
 import ActiveContact from "../pages/ActiveContact/ActiveContact";
+import ProfileContact from "@/pages/ProfileContact/ProfileContact";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <ActiveContact />,
+      },
+      {
+        path: "/profile-contact",
+        element: <ProfileContact />,
       },
     ],
   },

@@ -1,9 +1,11 @@
+import usePageTitle from "@/hooks/usePageTitle";
 import React from "react";
 const Header: React.FC = () => {
+  const { title } = usePageTitle();
   return (
     <header className="bg-white shadow-md p-4 flex justify-between items-center">
       <div className="flex justify-between items-center gap-4 w-full">
-        <h2 className="text-2xl font-semibold text-[#303135]">Contact</h2>
+        <h2 className="text-2xl font-semibold text-[#303135]">{title}</h2>
         <form action="#">
           <input
             placeholder="Search anything..."
