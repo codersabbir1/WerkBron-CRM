@@ -12,7 +12,7 @@ const ActiveContact: React.FC = () => {
     setTitle("Contact");
   }, [setTitle]);
   return (
-    <div className="relative border border-[#D8DCE8] rounded-xl h-[84vh]">
+    <div className="relative border border-[#D8DCE8] rounded-xl h-[84vh] lg:h-[86vh] xl:h-[89vh]">
       <Head />
       <table className="w-full">
         <TableHead />
