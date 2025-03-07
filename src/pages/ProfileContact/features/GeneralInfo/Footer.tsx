@@ -1,6 +1,5 @@
 import FooterPagination from "@/components/FooterPagination";
-import React, { useState } from "react";
-
+import React, { useState } from "react"; 
 
 const Footer: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);

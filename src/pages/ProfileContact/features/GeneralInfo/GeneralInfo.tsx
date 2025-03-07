@@ -1,4 +1,8 @@
 import React from "react";
+import Head from "./Head";
+import TableHead from "./TableHead";
+import TableBody from "./TableBody";
+import Footer from "./Footer";
 
 const GeneralInfo: React.FC = () => {
   return (
@@ -229,6 +233,14 @@ const GeneralInfo: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="w-full  border rounded-xl relative h-[35vh] lg:h-[37vh] xxl:h-[40vh]">
+        <Head />
+        <table className="w-full">
+          <TableHead />
+          <TableBody />
+        </table>
+        <Footer />
       </div>
     </div>
   );

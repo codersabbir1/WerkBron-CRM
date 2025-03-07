@@ -1,7 +1,7 @@
 import usePageTitle from "@/hooks/usePageTitle";
 import React, { useEffect, useState } from "react";
 import UserInfo from "./features/UserInfo";
-import GeneralInfo from "./features/GeneralInfo";
+import GeneralInfo from "./features/GeneralInfo/GeneralInfo";
 
 const ProfileContact: React.FC = () => {
   const { setTitle } = usePageTitle();
