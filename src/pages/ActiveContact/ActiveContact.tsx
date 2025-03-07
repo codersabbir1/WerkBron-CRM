@@ -13,7 +13,7 @@ const ActiveContact: React.FC = () => {
     setTitle("Contact");
   }, [setTitle]);
   return (
-    <div className="relative border border-[#D8DCE8] rounded-xl h-[84vh] lg:h-[86vh] xl:h-[89vh]">
+    <div className="relative border border-[#D8DCE8] rounded-xl h-[84vh] lg:h-[86vh] xl:h-[89vh] bg-[#fff]">
       <div className="flex justify-between items-center gap-4 p-4">
         <div className="flex gap-2 bg-[#F4F7FE] py-1 px-[5px] rounded text-sm font-medium">
           <span

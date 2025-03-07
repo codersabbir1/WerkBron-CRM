@@ -3,7 +3,7 @@ import React from "react";
 const Header: React.FC = () => {
   const { title } = usePageTitle();
   return (
-    <header className="bg-white shadow-md p-4 flex justify-between items-center">
+    <header className="bg-[#fff] border-b border-[#D8DCE8] p-4 flex justify-between items-center">
       <div className="flex justify-between items-center gap-4 w-full">
         <h2 className="text-2xl font-semibold text-[#303135]">{title}</h2>
         <form action="#">

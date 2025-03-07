@@ -15,7 +15,7 @@ const ProfileContact: React.FC = () => {
   }, [setTitle]);
   return (
     <div className="overflow-y-auto h-[90vh]">
-      <div className="border rounded-xl w-full overflow-hidden">
+      <div className="border rounded-xl w-full overflow-hidden bg-[#fff]">
         {/* UserInfo  */}
         <UserInfo />
         <div className="bg-[#F4F7FE]">
