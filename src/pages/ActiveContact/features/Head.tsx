@@ -3,14 +3,6 @@ import React from "react";
 const Head: React.FC = () => {
   return (
     <div className="flex justify-between items-center gap-4 p-4">
-      <div className="flex gap-2 bg-[#F4F7FE] py-1 px-[5px] rounded text-sm font-medium">
-        <span className="bg-[#fff] text-[#303135]  py-[6px] px-3 rounded cursor-pointer">
-          Active Contacts
-        </span>
-        <span className="py-[6px] px-3 text-[#71747D] cursor-pointer">
-          Archived
-        </span>
-      </div>
       <div className="flex gap-4 items-center text-[#71747D] text-sm ">
         <form action="#">
           <input

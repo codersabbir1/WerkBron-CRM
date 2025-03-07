@@ -236,10 +236,12 @@ const GeneralInfo: React.FC = () => {
       </div>
       <div className="w-full  border rounded-xl relative h-[35vh] lg:h-[37vh] xxl:h-[40vh]">
         <Head />
-        <table className="w-full">
-          <TableHead />
-          <TableBody />
-        </table>
+        <div className="w-full overflow-y-auto h-[27vh] xxxl:h-[30vh]">
+          <table className="w-full">
+            <TableHead />
+            <TableBody />
+          </table>
+        </div>
         <Footer />
       </div>
     </div>

@@ -2,16 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-body {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -68,8 +58,6 @@ body {
   }
 }
 
-
-
 @layer base {
   * {
     @apply border-border;
@@ -77,4 +65,24 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Default Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width for vertical scrollbar */
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e2e3e7; /* Light background */
+  border-radius: 4px;
 }

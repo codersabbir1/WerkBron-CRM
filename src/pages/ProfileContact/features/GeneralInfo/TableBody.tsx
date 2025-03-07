@@ -54,10 +54,10 @@ const userData: User[] = [
 
 const TableBody: React.FC = () => {
   return (
-    <tbody className="text-[#303135] text-sm">
+    <tbody className="text-[#303135] text-sm font-medium">
       {userData.map((user, index) => (
         <tr key={index} className="border-b">
-          <td className="p-4">{user.jobNumber}</td>
+          <td className="p-4 text-Primary font-semibold">{user.jobNumber}</td>
           <td colSpan={2} className="p-4">
             {user.position}
           </td>
