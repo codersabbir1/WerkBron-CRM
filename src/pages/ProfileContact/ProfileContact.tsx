@@ -1,6 +1,7 @@
 import usePageTitle from "@/hooks/usePageTitle";
 import React, { useEffect, useState } from "react";
 import UserInfo from "./features/UserInfo";
+import GeneralInfo from "./features/GeneralInfo";
 
 const ProfileContact: React.FC = () => {
   const { setTitle } = usePageTitle();
@@ -13,8 +14,8 @@ const ProfileContact: React.FC = () => {
     setTitle("Contact Profile");
   }, [setTitle]);
   return (
-    <div>
-      <div className="border rounded-md w-full overflow-hidden">
+    <div className="overflow-y-auto h-[90vh]">
+      <div className="border rounded-xl w-full overflow-hidden">
         {/* UserInfo  */}
         <UserInfo />
         <div className="bg-[#F4F7FE]">
@@ -54,6 +55,7 @@ const ProfileContact: React.FC = () => {
           </ul>
         </div>
       </div>
+      {active == "general" && <GeneralInfo />}
     </div>
   );
 };
