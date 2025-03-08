@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
     setCurrentPage(page);
   };
   return (
-    <footer className="absolute bottom-0 left-0 w-full border-t px-6 py-[2px] text-xs text-[#71747D]">
+    <footer className="absolute bottom-0 left-0 w-full border-t px-6 py-[2px] text-xs text-[#71747D] bg-[#fff] z-10">
       <div className="flex gap-4 justify-between items-center">
         <div className="flex gap-2 items-center">
           <span>Show</span>

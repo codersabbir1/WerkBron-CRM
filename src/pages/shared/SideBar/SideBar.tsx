@@ -31,7 +31,7 @@ const SideBar: React.FC = () => {
           <li className="flex flex-col items-start hover:bg-gray-200 cursor-pointer border-b border-[#4E5976] p-2">
             <Link to="/">
               <img
-                className="w-full !h-8"
+                className="w-full h-8"
                 src={
                   isSidebarOpen
                     ? "/img/Hofstead-logo-zwart-1 1.png"
@@ -234,10 +234,7 @@ const SideBar: React.FC = () => {
           </List>
         </ul>
         <ul className="space-y-2 border-t border-[#4E5976]">
-          <List
-            title={isSidebarOpen ? "Settings" : ""}
-            
-          >
+          <List title={isSidebarOpen ? "Settings" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
