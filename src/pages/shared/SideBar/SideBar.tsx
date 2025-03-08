@@ -1,23 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import List from "./features/List";
+import { CgMenuGridO } from "react-icons/cg";
 
 const SideBar: React.FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1340);
-
-  // Handle screen resize
-  useEffect(() => {
-    const updateScreenSize = () => {
-      const mobileView = window.innerWidth < 1340;
-      setIsMobile(mobileView);
-      setIsSidebarOpen(!mobileView);
-    };
-
-    updateScreenSize(); // Initialize state correctly
-    window.addEventListener("resize", updateScreenSize);
-    return () => window.removeEventListener("resize", updateScreenSize);
-  }, [isMobile]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <aside
@@ -257,6 +244,11 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
+          <span onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+            <List title={isSidebarOpen ? "Menu" : ""}>
+              <CgMenuGridO className="w-4 h-4 text-[#fff]" />
+            </List>
+          </span>
         </ul>
       </nav>
     </aside>
