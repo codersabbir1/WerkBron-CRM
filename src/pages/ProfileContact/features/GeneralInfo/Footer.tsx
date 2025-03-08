@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <span>Show</span>
           <div className="relative w-fit">
             <select
-              className="py-2 px-4 pr-10 outline-none border border-[#D8DCE8] rounded-[6px] cursor-pointer shadow-sm text-sm font-medium appearance-none bg-white"
+              className="py-2 px-4 pr-10 outline-none border border-[#D8DCE8] rounded-[6px] cursor-pointer shadow-sm text-sm font-medium appearance-none bg-[#fff]"
               name=""
               id=""
             >
