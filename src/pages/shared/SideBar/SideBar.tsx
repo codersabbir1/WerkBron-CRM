@@ -13,11 +13,11 @@ const SideBar: React.FC = () => {
       setIsMobile(mobileView);
       setIsSidebarOpen(!mobileView);
     };
-
+ 
     updateScreenSize(); // Initialize state correctly
     window.addEventListener("resize", updateScreenSize);
     return () => window.removeEventListener("resize", updateScreenSize);
-  }, []);
+  }, [isMobile]);
 
   return (
     <aside
