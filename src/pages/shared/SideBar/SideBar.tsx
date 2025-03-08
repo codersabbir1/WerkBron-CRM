@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import List from "./features/List";
-import { CgMenuGridO } from "react-icons/cg";
 
 const SideBar: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -246,7 +245,77 @@ const SideBar: React.FC = () => {
           </List>
           <span onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <List title={isSidebarOpen ? "Menu" : ""}>
-              <CgMenuGridO className="w-4 h-4 text-[#fff]" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <path
+                  d="M16 8.00016C16.7364 8.00016 17.3334 7.40321 17.3334 6.66683C17.3334 5.93045 16.7364 5.3335 16 5.3335C15.2637 5.3335 14.6667 5.93045 14.6667 6.66683C14.6667 7.40321 15.2637 8.00016 16 8.00016Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.3334 8.00016C26.0698 8.00016 26.6667 7.40321 26.6667 6.66683C26.6667 5.93045 26.0698 5.3335 25.3334 5.3335C24.597 5.3335 24 5.93045 24 6.66683C24 7.40321 24.597 8.00016 25.3334 8.00016Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.66671 8.00016C7.40309 8.00016 8.00004 7.40321 8.00004 6.66683C8.00004 5.93045 7.40309 5.3335 6.66671 5.3335C5.93033 5.3335 5.33337 5.93045 5.33337 6.66683C5.33337 7.40321 5.93033 8.00016 6.66671 8.00016Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16 17.3335C16.7364 17.3335 17.3334 16.7365 17.3334 16.0002C17.3334 15.2638 16.7364 14.6668 16 14.6668C15.2637 14.6668 14.6667 15.2638 14.6667 16.0002C14.6667 16.7365 15.2637 17.3335 16 17.3335Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.3334 17.3335C26.0698 17.3335 26.6667 16.7365 26.6667 16.0002C26.6667 15.2638 26.0698 14.6668 25.3334 14.6668C24.597 14.6668 24 15.2638 24 16.0002C24 16.7365 24.597 17.3335 25.3334 17.3335Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.66671 17.3335C7.40309 17.3335 8.00004 16.7365 8.00004 16.0002C8.00004 15.2638 7.40309 14.6668 6.66671 14.6668C5.93033 14.6668 5.33337 15.2638 5.33337 16.0002C5.33337 16.7365 5.93033 17.3335 6.66671 17.3335Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16 26.6668C16.7364 26.6668 17.3334 26.0699 17.3334 25.3335C17.3334 24.5971 16.7364 24.0002 16 24.0002C15.2637 24.0002 14.6667 24.5971 14.6667 25.3335C14.6667 26.0699 15.2637 26.6668 16 26.6668Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M25.3334 26.6668C26.0698 26.6668 26.6667 26.0699 26.6667 25.3335C26.6667 24.5971 26.0698 24.0002 25.3334 24.0002C24.597 24.0002 24 24.5971 24 25.3335C24 26.0699 24.597 26.6668 25.3334 26.6668Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.66671 26.6668C7.40309 26.6668 8.00004 26.0699 8.00004 25.3335C8.00004 24.5971 7.40309 24.0002 6.66671 24.0002C5.93033 24.0002 5.33337 24.5971 5.33337 25.3335C5.33337 26.0699 5.93033 26.6668 6.66671 26.6668Z"
+                  stroke="white"
+                  stroke-width="2.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </List>
           </span>
         </ul>
