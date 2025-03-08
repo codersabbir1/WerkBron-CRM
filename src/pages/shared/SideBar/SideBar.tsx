@@ -14,7 +14,7 @@ const SideBar: React.FC = () => {
     >
       <nav className="flex flex-col justify-between h-full">
         <ul className="space-y-2">
-          <li className="flex flex-col items-center hover:bg-gray-200 cursor-pointer border-b border-[#4E5976] p-2">
+          <li className="flex flex-col items-center hover:bg-gray-200 cursor-pointer border-b border-[#4E5976] px-2 py-[10px]">
             <Link to="/">
               <img
                 className="w-full h-8"
