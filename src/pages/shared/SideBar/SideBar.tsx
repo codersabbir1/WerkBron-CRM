@@ -244,7 +244,11 @@ const SideBar: React.FC = () => {
             </svg>
           </List>
           <span onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-            <List title={isSidebarOpen ? "Menu" : ""}>
+            <li
+              className={`flex items-center  rounded cursor-pointer gap-2 ${
+                isSidebarOpen ? "my-2 py-2 px-2" : "flex-col m-2 p-2"
+              }`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -316,7 +320,10 @@ const SideBar: React.FC = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-            </List>
+              {isSidebarOpen && (
+                <p className="text-[#fff] text-sm font-medium">Menu</p>
+              )}
+            </li>
           </span>
         </ul>
       </nav>
