@@ -1,18 +1,47 @@
-import React from "react"; 
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import List from "./features/List";
 
 const SideBar: React.FC = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1340);
+
+  // Handle screen resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1340);
+      if (window.innerWidth < 1340) {
+        setIsSidebarOpen(false);
+      } else {
+        setIsSidebarOpen(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
-    <aside className="bg-Secondary text-white shadow-md transition-all duration-300 w-14">
+    <aside
+      className={`bg-Secondary text-white shadow-md transition-all duration-300 ${
+        isSidebarOpen ? "w-[266px]" : "w-14"
+      }`}
+    >
       <nav className="flex flex-col justify-between h-full">
         <ul className="space-y-2">
-          <li className="flex flex-col items-center hover:bg-gray-200 cursor-pointer border-b border-[#4E5976]">
+          <li className="flex flex-col items-start hover:bg-gray-200 cursor-pointer border-b border-[#4E5976] p-2">
             <Link to="/">
-              <img className="w-full" src="/img/brand.png" alt="" />
+              <img
+                className="w-full !h-8"
+                src={
+                  isSidebarOpen
+                    ? "/img/Hofstead-logo-zwart-1 1.png"
+                    : "/img/Modern-Brand-Name-Initials-Typography-Logo-3 1.png"
+                }
+                alt=""
+              />
             </Link>
           </li>
-          <List>
+          <List title={isSidebarOpen ? "Dashboard" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -50,7 +79,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Company" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -67,7 +96,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Contact" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -84,7 +113,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Vacancy" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -101,7 +130,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Candidate" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -118,7 +147,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Cashcow" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -135,7 +164,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Invoice" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -152,7 +181,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Mailing" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -169,7 +198,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Calendar" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -186,7 +215,7 @@ const SideBar: React.FC = () => {
               />
             </svg>
           </List>
-          <List>
+          <List title={isSidebarOpen ? "Job Scraper" : ""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -204,8 +233,11 @@ const SideBar: React.FC = () => {
             </svg>
           </List>
         </ul>
-        <ul className="space-y-2">
-          <li className="flex flex-col items-center p-4 hover:bg-white text-white  cursor-pointer border-t border-[#4E5976]">
+        <ul className="space-y-2 border-t border-[#4E5976]">
+          <List
+            title={isSidebarOpen ? "Settings" : ""}
+            
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -228,7 +260,7 @@ const SideBar: React.FC = () => {
                 stroke-linejoin="round"
               />
             </svg>
-          </li>
+          </List>
         </ul>
       </nav>
     </aside>
