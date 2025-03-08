@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <form action="#">
           <input
             placeholder="Search anything..."
-            className="border rounded w-[320px] min-h-[40px] px-3 border-[#D8DCE8] outline-none text-[#353536] text-sm"
+            className="border rounded-[6px] w-[320px] min-h-[40px] px-3 border-[#D8DCE8] outline-none text-[#353536] text-sm"
             type="text"
           />
         </form>
