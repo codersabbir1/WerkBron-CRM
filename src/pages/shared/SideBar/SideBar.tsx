@@ -13,7 +13,7 @@ const SideBar: React.FC = () => {
       setIsMobile(mobileView);
       setIsSidebarOpen(!mobileView);
     };
- 
+
     updateScreenSize(); // Initialize state correctly
     window.addEventListener("resize", updateScreenSize);
     return () => window.removeEventListener("resize", updateScreenSize);
@@ -33,8 +33,8 @@ const SideBar: React.FC = () => {
                 className="w-full h-8"
                 src={
                   isSidebarOpen
-                    ? "/img/Hofstead-logo-zwart-1 1.png"
-                    : "/img/Modern-Brand-Name-Initials-Typography-Logo-3 1.png"
+                    ? "/img/Modern-Brand2.png"
+                    : "/img/Modern-Brand.png"
                 }
                 alt=""
               />
