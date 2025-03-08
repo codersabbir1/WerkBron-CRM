@@ -8,18 +8,17 @@ const SideBar: React.FC = () => {
 
   // Handle screen resize
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1340);
-      if (window.innerWidth < 1340) {
-        setIsSidebarOpen(false);
-      } else {
-        setIsSidebarOpen(true);
-      }
+    const updateScreenSize = () => {
+      const mobileView = window.innerWidth < 1340;
+      setIsMobile(mobileView);
+      setIsSidebarOpen(!mobileView);
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    updateScreenSize(); // Initialize state correctly
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
   }, []);
+
   return (
     <aside
       className={`bg-Secondary text-white shadow-md transition-all duration-300 ${
